@@ -8,6 +8,9 @@
 	font-family:'Roboto', sans-serif;
 	font-size: 22px;
 	text-decoration: none;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img{
@@ -66,6 +69,56 @@ background: -moz-linear-gradient(top,  #f27900 0%, #ed5600 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top,  #f27900 0%,#ed5600 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  #f27900 0%,#ed5600 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f27900', endColorstr='#ed5600',GradientType=0 ); /* IE6-9 */
+}
+
+/*==========ESTILOS ABOUT ME==============*/
+
+div#body{
+    margin: 40px auto;
+    width: 600px;
+    min-height: 50px;
+    background-color:red;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+div.subapartado{
+    width: 600px;
+    min-height: 50px;
+    background-color: green;
+    -webkit-transition: height 0.5s;
+}
+
+div.titulo1{
+    width: 600px;
+    height: 50px;
+    background-color: #24c06f;
+    overflow: hidden;
+    border-bottom: 1px solid #39f58f;
+}
+
+p.titulo{
+    margin:13px;
+    color: white;
+    text-align: center;
+}
+
+div.info1{
+    width: 600px;
+    height:0px;
+    background-color: #f5f5f5;
+    overflow:hidden;
+    -webkit-transition: height 0.5s;
+}
+
+p.info1{
+    margin: 20px;
+    text-align: center;
+    color: #4f4f44;
+}
+
+div.subapartado:hover div.info1{
+    height:100px;
 }
 
 /*========ESTILOS DEL PORTAFOLIO========*/
