@@ -24,6 +24,11 @@ img{
 }
 
 /*==========ESTILOS DEL HEADER==========*/
+.intro{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
 
 
 /*=============ESTILOS DEL NAVBAR========*/
@@ -133,7 +138,7 @@ div.subapartado:hover div.info1{
     text-align: center;
 }
 
-.lenguaje{}
+.lenguajes{}
 
 .zoom {
     margin: 10px;
@@ -398,6 +403,12 @@ input{
 }
 
 /*Estilos del footer*/
+.iconos{
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+
 .linkedin{
     width: 50px;
     height: 50px;
@@ -408,3 +419,5 @@ input{
     height: 50px;
     margin: 0 5px;
 }
+
+

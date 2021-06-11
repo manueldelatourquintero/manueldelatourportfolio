@@ -4,23 +4,37 @@
 //Corchetes cuadrados = []
 //Slash invertida = \
 
-//Llamando a los campos
-$nombre = $_POST['nombre'];
-$correo = $_POST['correo'];
-$telefono = $_POST['telefono'];
-$mensaje = $_POST['mensaje'];
+$servidor="localhost";
+$usuario="root";
+$clave='';
+$baseDeDatos="formulario";
 
-//Datos para el correo
-$destitanatario = "manuel.gerardo.delatour@gmail.com"
+$enlace = mysqli_connect($servidor, $usuario,$clave, $baseDeDatos);
 
+if (!$enlace) {
+	echo "Error en la conexión con el servidor";
+}
 
-$carta = "De: $nombre \n";
-$carta = "Correo: $correo \n";
-$carta = "Telefono: $telefono \n";
-$carta = "Mensaje: $mensaje";
+if(isset($_POST['registrarse'])){
 
-//Enviando mensaje
-mail($destitanatario, $asunto, $carta);
-header('Location:mensaje-de-envio.html')
+	$nombre = $_POST['nombre'];
+	$telefono= $_POST['telefono'];
+	$correo= $_POST['correo'];
+	$mensaje= $_POST['mensaje'];
+    
+    $insertarDatos = "INSERT INTO datos VALUES ('$nombre', 
+                                                '$telefono',
+                                                '$correo',
+                                                '$mensaje')";
+
+    $ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
+
+    if (!$ejecutarInsertar) {
+    	echo"Error en La Línea de SQL";
+    } 
+     
+}
+
+header("Location: mensaje-de-envio.html");
 
 ?>
